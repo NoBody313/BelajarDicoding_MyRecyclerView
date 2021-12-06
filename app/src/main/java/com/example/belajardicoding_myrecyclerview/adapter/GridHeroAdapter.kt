@@ -20,11 +20,6 @@ class GridHeroAdapter(private val listHero: ArrayList<Hero>) :
         this.onItemClickCallback = onItemClickCallback
     }
 
-    inner class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-
-    }
-
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): GridViewHolder {
         val view: View = LayoutInflater.from(viewGroup.context)
             .inflate(R.layout.item_grid_hero, viewGroup, false)
@@ -38,6 +33,11 @@ class GridHeroAdapter(private val listHero: ArrayList<Hero>) :
             .into(holder.imgPhoto)
 
         holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listHero[holder.adapterPosition]) }
+    }
+
+    inner class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
+
     }
 
     override fun getItemCount(): Int {

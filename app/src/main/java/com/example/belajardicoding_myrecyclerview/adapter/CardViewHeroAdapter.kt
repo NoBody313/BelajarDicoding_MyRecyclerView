@@ -72,12 +72,12 @@ class CardViewHeroAdapter(private val listHero: ArrayList<Hero>) :
         holder.itemView.setOnClickListener {
             Toast.makeText(
                 holder.itemView.context,
-                "Kamu memilih" + listHero[holder.adapterPosition].name,
+                "Kamu memilih " + listHero[holder.adapterPosition].name,
                 Toast.LENGTH_SHORT
             ).show()
         }
 
-        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listHero[holder.adapterPosition]) }
+//        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listHero[holder.adapterPosition]) }
     }
 
     override fun getItemCount(): Int {
