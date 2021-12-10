@@ -68,6 +68,7 @@ class CardViewHeroAdapter(private val listHero: ArrayList<Hero>) :
             ).show()
         }
 
+        // Yg Ngespawn Pas Di Klik
         // Item View
         holder.itemView.setOnClickListener {
             Toast.makeText(
